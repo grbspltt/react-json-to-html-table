@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/react-json-to-html-table"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react-json-to-html-table",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
