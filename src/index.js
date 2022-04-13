@@ -2,6 +2,8 @@ export * from "./components";
 import React from "react";
 import ReactDOM from "react-dom";
 import HtmlJsonTable from "./components/HtmlJsonTable/HtmlJsonTable";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.js";
 
 // import "./components/styles/HtmlJsonTable.css";
 
@@ -137,6 +139,9 @@ function OnselectAll(event, allSelected) {
   console.log("🚀 ~ file: index.js ~ line 35 ~ Onselect ~ allSelected", allSelected);
 }
 
+let HeaderText = "react-json-to-html-table";
+let HeaderStyle = { color: "white", backgroundColor: "black" };
+
 ReactDOM.render(
   <HtmlJsonTable
     data={data}
@@ -145,7 +150,9 @@ ReactDOM.render(
     onClickValue={onClickValue}
     Onselect={Onselect}
     OnselectAll={OnselectAll}
-    singleSelect
+    singleSelect={false}
+    HeaderText={HeaderText}
+    HeaderStyle={HeaderStyle}
   />,
   document.querySelector("#root")
 );

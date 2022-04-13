@@ -1,7 +1,8 @@
 import React, { createRef } from "react";
 
 const HtmlJsonTable = (props) => {
-  const { data, className, onClickKey, onClickValue, Onselect, OnselectAll, singleSelect } = props;
+  const { data, className, onClickKey, onClickValue, Onselect, OnselectAll, singleSelect, HeaderText, HeaderStyle } =
+    props;
 
   let selected = [];
   function setSelected(event, key, value, keyValue) {
@@ -86,6 +87,13 @@ const HtmlJsonTable = (props) => {
 
   return (
     <div>
+      <table>
+        <thead style={HeaderStyle}>
+          <tr>
+            <th>{HeaderText}</th>
+          </tr>
+        </thead>
+      </table>
       <table className={className}>
         <tbody>
           {OnselectAll && !singleSelect ? (

@@ -38,5 +38,8 @@
   "module": "dist/esm/index.js",
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
 }
