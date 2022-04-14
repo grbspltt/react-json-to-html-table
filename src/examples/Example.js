@@ -6,8 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.js";
 // import "./components/styles/HtmlJsonTable.css";
 
-// const HtmlJsonTable = require("react-json-to-html-table");
-
 function Example() {
   const data = {
     id: "0001",

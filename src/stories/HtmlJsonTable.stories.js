@@ -1,5 +1,5 @@
 import React from "react";
-import HtmlJsonTable from "./HtmlJsonTable";
+import HtmlJsonTable from "../index";
 
 export default {
   title: "Basic",

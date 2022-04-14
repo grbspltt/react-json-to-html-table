@@ -3,27 +3,33 @@ import postcss from "rollup-plugin-postcss";
 import serve from "rollup-plugin-serve";
 import livereload from "rollup-plugin-livereload";
 import babel from "@rollup/plugin-babel";
-import { nodeResolve } from "@rollup/plugin-node-resolve";
+import resolve from "@rollup/plugin-node-resolve";
 import replace from "@rollup/plugin-replace";
+import pkg from "./package.json";
 
 export default [
   {
     input: "src/index.js",
-    output: {
-      file: "dist/bundle.js",
-      format: "iife",
-      sourcemap: true,
-      name: "HtmlJsonTable",
-    },
+    output: [
+      {
+        file: pkg.main,
+        format: "cjs",
+        sourcemap: true,
+      },
+      {
+        file: pkg.module,
+        format: "es",
+        sourcemap: true,
+      },
+    ],
     plugins: [
-      nodeResolve({
+      resolve({
         extensions: [".js"],
       }),
-      replace({
-        "process.env.NODE_ENV": JSON.stringify("development"),
-      }),
+
       babel({
         presets: ["@babel/preset-react"],
+        exclude: "node_modules/**",
       }),
       commonjs(),
       serve({
@@ -34,7 +40,9 @@ export default [
         port: 3000,
       }),
       livereload({ watch: "dist" }),
-      postcss(),
+      postcss({
+        modules: true,
+      }),
     ],
   },
   {
