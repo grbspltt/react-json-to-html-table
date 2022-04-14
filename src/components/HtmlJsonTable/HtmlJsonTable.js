@@ -1,4 +1,4 @@
-import React, { createRef } from "react";
+import React from "react";
 
 const HtmlJsonTable = (props) => {
   const { data, className, onClickKey, onClickValue, Onselect, OnselectAll, singleSelect, HeaderText, HeaderStyle } =

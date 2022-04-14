@@ -1,1 +1,1 @@
-export { default as Button } from "./HtmlJsonTable";
+export { default as HtmlJsonTable } from "./HtmlJsonTable";
