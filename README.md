@@ -14,11 +14,14 @@
   react-json-to-html-table is a small react component that convert **any valid JSON** array or object into an HTML table with some useful added feautures.
   No need to define Columns or Rows!
 
-  [Installation](#installation) •
-[Examples](#Examples) •
-  [Props](#Props) •
-[Storybook](#Storybook) 
+[Installation](#installation) •
+[Examples](#examples) •
+[Props](#props) •
+[Storybook](#storybook)
 </div>
+
+
+![](HtmlJsonTable.gif)
 
 ## Installation
   
@@ -28,9 +31,8 @@
 npm i react-json-to-html-table
 ```
 
-
 ## Examples
-# Basic
+## Basic
 
 ```sh
 import React from "react";
@@ -66,7 +68,7 @@ return (
   <HtmlJsonTable data={data} className="table table-sm table-striped table-bordered table-responsive"/>
 )}
 ```
-# Select
+## Select
 
 ```sh
 import React from "react";
@@ -110,8 +112,6 @@ return (
 )}
 ```
 
-![](HtmlJsonTable.gif)
-
 ## Props
 
 | Name               | Description                                 |Type| Returns | Required                     |
@@ -125,6 +125,8 @@ return (
 | singleSelect        | Makes table only one row selectable with radio checkbox|bool | event, key, value, keyValue, selected|false         |
 | HeaderText         | Insert a table Header                               |string |         -            |false         |
 | HeaderStyle         | Header stile (react css inline)             |css inline |             -        |false         |
+
+
 ## Storybook
 ```sh
 start-storybook -p 6006
