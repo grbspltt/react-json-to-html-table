@@ -1,17 +1,22 @@
 {
-  "name": "@cyberdevnet/react-json-to-html-table",
+  "name": "react-json-to-html-table",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "version": "1.0.2",
-  "description": "react-json-to-html-table",
+  "description": "Convert any valid/nested JSON to HTML Table — React, Javascript.",
+  "repository": "https://github.com/cyberdevnet/react-json-to-html-table.git",
+  "homepage": "https://github.com/cyberdevnet/react-json-to-html-table.git",
+  "bugs": {
+    "url": "https://github.com/cyberdevnet/react-json-to-html-table/issues"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "rollup -c rollup.config.js -w",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "",
+  "author": "cyberdevnet",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.9",
