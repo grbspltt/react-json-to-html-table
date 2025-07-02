@@ -42,8 +42,8 @@
     "rollup-plugin-serve": "~1.1.0"
   },
   "peerDependencies": {
-    "react": "~18.0.2",
-    "react-dom": "~18.0.2"
+    "react": "^18.0.1",
+    "react-dom": "^18.0.1"
   },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
